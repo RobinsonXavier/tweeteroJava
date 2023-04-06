@@ -2,7 +2,7 @@ package com.tweetero.api.dto;
 
 import jakarta.validation.constraints.NotBlank;
 
-public record UserDTO(
+public record AccountDTO(
 
   @NotBlank
   String username,
