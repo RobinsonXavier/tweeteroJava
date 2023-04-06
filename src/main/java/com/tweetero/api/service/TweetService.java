@@ -37,9 +37,13 @@ public class TweetService {
       if(page != null) {
         int multi = Integer.parseInt(page);
         multi = multi * 5;
+        int diff = 0;
+        if(multi > 5) {
+          diff = multi - 5;
+        }
 
-        for(int j = multi; j > 0; j--) {
-          newList.add(list.get(i));
+        for(int j = 5; j > 0; j--) {
+          newList.add(list.get(i - diff));
           i--;
         }
 
